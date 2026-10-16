@@ -51,8 +51,9 @@ getActivity(username)
             console.log("last one")
             return
         }else{
+            console.log(events.length);
             for(const event of events){
-                describe(event);
+                console.log(describe(event));
             }
         }
     })
