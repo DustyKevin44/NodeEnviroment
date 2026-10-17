@@ -1,0 +1,59 @@
+body {
+  font-family: system-ui, "Segoe UI", sans-serif;
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.5;
+  color: #1b1f27;
+  background: #f6f7f9;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input[type="search"] {
+  flex: 1;
+}
+
+input, select, button {
+  font: inherit;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #dde1e8;
+  border-radius: 6px;
+}
+
+button {
+  background: #1f5fd1;
+  border-color: #1f5fd1;
+  color: white;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+article {
+  background: white;
+  border: 1px solid #dde1e8;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 0.75rem;
+}
+
+article h2 {
+  font-size: 1.05rem;
+  margin: 0 0 0.25rem;
+}
+
+article a {
+  color: inherit;
+}
+
+.meta {
+  color: #5d6677;
+  font-size: 0.85rem;
+}

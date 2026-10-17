@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News search</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>News search</h1>
+
+  <form id="form">
+    <input type="search" id="q" placeholder="Search for a topic" required>
+
+    <select id="sortBy">
+      <option value="publishedAt">Newest</option>
+      <option value="relevancy">Most relevant</option>
+      <option value="popularity">Most popular</option>
+    </select>
+
+    <button type="submit">Search</button>
+  </form>
+
+  <p id="status"></p>
+  <div id="results"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
