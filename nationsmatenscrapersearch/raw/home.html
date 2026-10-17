@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Discover what Uppsala's student nations are serving today. Clear, quick, and consistently updated.">
+    <meta name="keywords"
+        content="Nationsmaten, food at the nations, student food Uppsala, student nation lunch, national menus, menu, today's lunch Uppsala, student nation dinner, menu Uppsala nation, Uppsala student nations food, student lunch, national lunch, food and opening hours Uppsala nations">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <title>Nationsmaten</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom style to show dropdown on hover for desktop */
+        @media (min-width: 768px) {
+            .group:hover .group-hover\:block {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-100 flex flex-col min-h-screen">
+    <div id="cookie-consent" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 z-50">
+            <div class="max-w-7xl mx-auto flex justify-between items-center">
+                <p class="mr-4">We use cookies to manage login and session activity. By continuing to use the site, you agree to the use of cookies.
+                    <a href="/privacy" class="text-amber-500 hover:text-amber-400">Read more about our privacy policy</a>
+                </p>
+                <button onclick="acceptCookies()" class="bg-amber-500 text-slate-800 px-4 py-2 rounded hover:bg-amber-400">
+                    I understand
+                </button>
+            </div>
+        </div>
+        <script>
+        function acceptCookies() {
+            document.cookie = "cookie_consent=accepted; max-age=" + (365 * 24 * 60 * 60) + "; path=/";
+            document.getElementById("cookie-consent").style.display = "none";
+        }
+        </script>
+    <header class="bg-slate-800 text-white py-5 shadow-md">
+        <a href="/"
+            class="flex items-center justify-center gap-3 no-underline hover:opacity-90 transition">
+            <img src="/favicon/favicon.svg" alt="Nationsmaten logo" class="h-10 w-10">
+            <h1 class="text-3xl font-bold">Nationsmaten</h1>
+        </a>
+    </header>
+
+
+    <nav class="bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-2 md:py-0">
+                <!-- Desktop menu -->
+                <ul class="hidden md:flex space-x-2">
+                    <li>
+                        <a href="/"
+                            class="block py-4 px-5 text-white font-bold hover:bg-amber-500 hover:text-slate-800 rounded-md transition duration-300">Home</a>
+                    </li>
+                    <li>
+                        <a href="/search"
+                            class="block py-4 px-5 text-white font-bold hover:bg-amber-500 hover:text-slate-800 rounded-md transition duration-300">Search</a>
+                    </li>
+                    <li>
+                        <a href="/kalender"
+                            class="block py-4 px-5 text-white font-bold hover:bg-amber-500 hover:text-slate-800 rounded-md transition duration-300">Calendar</a>
+                    </li>
+                    <li class="group relative">
+                        <a href="#"
+                            class="block py-4 px-5 text-white font-bold hover:bg-amber-500 hover:text-slate-800 rounded-md transition duration-300">Nations
+                            ▾</a>
+                        <div
+                            class="hidden group-hover:block absolute top-full left-0 bg-slate-700 p-5 shadow-lg z-50 min-w-[400px] max-h-[400px] overflow-y-auto">
+                            <div class="grid grid-cols-2 gap-2.5"><a href="/nation/stockholms" class="block p-3 text-white no-underline rounded-md transition duration-200 hover:bg-amber-500 hover:text-slate-800">Stockholms nation</a><a href="/nation/uplands" class="block p-3 text-white no-underline rounded-md transition duration-200 hover:bg-amber-500 hover:text-slate-800">Uplands nation</a><a href="/nation/gastrike-halsinge" class="block p-3 text-white no-underline rounded-md transition duration-200 hover:bg-amber-500 hover:text-slate-800">Gästrike-Hälsinge nation</a><a href="/nation/ostgota" class="block p-3 text-white no-underline rounded-md transition duration-200 hover:bg-amber-500 hover:text-slate-800">Östgöta nation</a><a href="/nation/vastgota" class="block p-3 text-white no-underline rounded-md transition duration-200 hover:bg-amber-500 hover:text-slate-800">Västgöta nation</a><a href="/nation/sodermanlands-nerikes" class="block p-3 text-white no-underline rounded-md transition duration-200 hover:bg-amber-500 hover:text-slate-800">Södermanlands-Nerikes nation</a><a href="/nation/vastmanlands-dala" class="block p-3 text-white no-underline rounded-md transition duration-200 hover:bg-amber-500 hover:text-slate-800">Västmanlands-Dala nation</a><a href="/nation/smalands" class="block p-3 text-white no-underline rounded-md transition duration-200 hover:bg-amber-500 hover:text-slate-800">Smålands nation</a><a href="/nation/goteborgs" class="block p-3 text-white no-underline rounded-md transition duration-200 hover:bg-amber-500 hover:text-slate-800">Göteborgs nation</a><a href="/nation/kalmar" class="block p-3 text-white no-underline rounded-md transition duration-200 hover:bg-amber-500 hover:text-slate-800">Kalmar nation</a></div><div class="flex justify-center gap-5 mt-4"><a href="/nation/varmlands" class="block p-3 text-white no-underline rounded-md transition duration-200 hover:bg-amber-500 hover:text-slate-800">Värmlands nation</a><a href="/nation/norrlands" class="block p-3 text-white no-underline rounded-md transition duration-200 hover:bg-amber-500 hover:text-slate-800">Norrlands nation</a><a href="/nation/gotlands" class="block p-3 text-white no-underline rounded-md transition duration-200 hover:bg-amber-500 hover:text-slate-800">Gotlands nation</a></div>                        </div>
+                    </li>
+                </ul>
+
+                <!-- Mobile hamburger -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- User info -->
+                <div class="hidden md:flex items-center ml-4">
+                                            <a href="/login" class="text-white hover:text-amber-500">Log in</a>
+                                    </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu"
+                class="hidden md:hidden mt-2 space-y-1 bg-slate-700 rounded-md overflow-y-auto max-h-[70vh]">
+                <a href="/"
+                    class="block py-2 px-4 text-white font-bold hover:bg-amber-500 hover:text-slate-800">Home</a>
+                <a href="/search"
+                    class="block py-2 px-4 text-white font-bold hover:bg-amber-500 hover:text-slate-800">Search</a>
+                <a href="/kalender"
+                    class="block py-2 px-4 text-white font-bold hover:bg-amber-500 hover:text-slate-800">Calendar</a>
+                <div class="border-t border-slate-600"></div>
+                <span class="block py-2 px-4 text-white font-bold">Nations</span>
+                                    <a href="/nation/stockholms"
+                        class="block py-2 px-4 text-white hover:bg-amber-500 hover:text-slate-800">Stockholms nation</a>
+                                    <a href="/nation/uplands"
+                        class="block py-2 px-4 text-white hover:bg-amber-500 hover:text-slate-800">Uplands nation</a>
+                                    <a href="/nation/gastrike-halsinge"
+                        class="block py-2 px-4 text-white hover:bg-amber-500 hover:text-slate-800">Gästrike-Hälsinge nation</a>
+                                    <a href="/nation/ostgota"
+                        class="block py-2 px-4 text-white hover:bg-amber-500 hover:text-slate-800">Östgöta nation</a>
+                                    <a href="/nation/vastgota"
+                        class="block py-2 px-4 text-white hover:bg-amber-500 hover:text-slate-800">Västgöta nation</a>
+                                    <a href="/nation/sodermanlands-nerikes"
+                        class="block py-2 px-4 text-white hover:bg-amber-500 hover:text-slate-800">Södermanlands-Nerikes nation</a>
+                                    <a href="/nation/vastmanlands-dala"
+                        class="block py-2 px-4 text-white hover:bg-amber-500 hover:text-slate-800">Västmanlands-Dala nation</a>
+                                    <a href="/nation/smalands"
+                        class="block py-2 px-4 text-white hover:bg-amber-500 hover:text-slate-800">Smålands nation</a>
+                                    <a href="/nation/goteborgs"
+                        class="block py-2 px-4 text-white hover:bg-amber-500 hover:text-slate-800">Göteborgs nation</a>
+                                    <a href="/nation/kalmar"
+                        class="block py-2 px-4 text-white hover:bg-amber-500 hover:text-slate-800">Kalmar nation</a>
+                                    <a href="/nation/varmlands"
+                        class="block py-2 px-4 text-white hover:bg-amber-500 hover:text-slate-800">Värmlands nation</a>
+                                    <a href="/nation/norrlands"
+                        class="block py-2 px-4 text-white hover:bg-amber-500 hover:text-slate-800">Norrlands nation</a>
+                                    <a href="/nation/gotlands"
+                        class="block py-2 px-4 text-white hover:bg-amber-500 hover:text-slate-800">Gotlands nation</a>
+                            </div>
+        </div>
+    </nav>
+
+    <script>
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <div class="p-5 max-w-5xl mx-auto text-center flex-grow">
+        <!-- Sidan innehåll börjar här -->    <div class="text-center py-12">
+        <h2 class="text-3xl font-bold mb-6 text-slate-800">Welcome to Nationsmaten!</h2>
+        <p class="mb-8 text-lg text-gray-700">
+            Find today's lunch, tonight's pub menu, and what is being served right now across Uppsala's student nations.
+        </p>
+
+        <p class="mb-8 text-lg text-gray-700">
+            Menus and opening hours from all nations are gathered in one place, making it easy to see what is available and when. Whether you are looking for something quick between lectures, a relaxed dinner, or an evening with friends, Nationsmaten makes it simple to choose where to go.
+        </p>
+
+        <div class="flex flex-col md:flex-row justify-center gap-6">
+            <a href="/kalender?day=Sunday&time_start=01:07&time_end=01:07"
+                class="px-8 py-4 bg-green-500 text-white font-semibold rounded-xl shadow hover:bg-green-600 transition">
+                ⏱️ Meals today
+            </a>
+            <!--  <a href="/search?menu_type=Lunch&day=Sunday" 
+               class="px-8 py-4 bg-amber-500 text-slate-800 font-semibold rounded-xl shadow hover:bg-amber-600 transition">
+                🍲 Dagens lunch
+            </a>
+
+            <a href="/search?menu_type=Pub&day=Sunday" 
+               class="px-8 py-4 bg-indigo-500 text-white font-semibold rounded-xl shadow hover:bg-indigo-600 transition">
+                🍻 Dagens pub
+            </a> -->
+
+
+        </div>
+    </div>
+        </div> <!-- Stänger content-div från header -->
+    
+    <footer class="bg-slate-800 text-white p-4 mt-8">
+        <div class="max-w-7xl mx-auto px-4">
+            
+            <div class="flex justify-between items-center mb-4">
+                <p class="text-sm">&copy; 2026 Nationsmaten</p>
+
+                <div class="flex items-center space-x-4">
+                    <a href="/kontakt" class="text-sm text-white hover:underline">Contact</a>
+                                    </div>
+            </div>
+
+            <div class="text-sm text-gray-400 text-center">
+                <a href="/privacy" class="hover:text-white">Privacy policy</a>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
